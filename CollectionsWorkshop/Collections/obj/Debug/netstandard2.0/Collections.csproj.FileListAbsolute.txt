@@ -1,0 +1,16 @@
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/bin/Debug/netstandard2.0/Collections.deps.json
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/bin/Debug/netstandard2.0/Collections.dll
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/bin/Debug/netstandard2.0/Collections.pdb
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/obj/Debug/netstandard2.0/Collections.csproj.CoreCompileInputs.cache
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfoInputs.cache
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfo.cs
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/obj/Debug/netstandard2.0/Collections.dll
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/Collections/obj/Debug/netstandard2.0/Collections.pdb
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/obj/Debug/netstandard2.0/Collections.csproj.CoreCompileInputs.cache
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfoInputs.cache
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfo.cs
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/obj/Debug/netstandard2.0/Collections.dll
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/obj/Debug/netstandard2.0/Collections.pdb
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/bin/Debug/netstandard2.0/Collections.deps.json
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/bin/Debug/netstandard2.0/Collections.dll
+/Users/scastro/Projects/Guggenheim/WorkshopCSharp/CollectionsWorkshop/Collections/bin/Debug/netstandard2.0/Collections.pdb
