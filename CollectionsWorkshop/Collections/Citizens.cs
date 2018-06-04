@@ -16,7 +16,7 @@ namespace Collections
 
         private string[,] _citizens;
 
-        public string GetCitizenById(string id)
+        public string GetById(string id)
         {
            
             for (int i = 0; i < _citizens.GetLength(0); i++){

@@ -8,7 +8,7 @@ namespace Collections.Test
         [Fact]
         public void ShouldBeRoeroWhenRequestIdNumber()
         {
-            Assert.Equal("Robero",new Citizens().GetCitizenById("1617898743"));
+            Assert.Equal("Robero",new Citizens().GetById("1617898743"));
         }
     }
 }
