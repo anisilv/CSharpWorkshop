@@ -5,7 +5,7 @@ namespace Collections
     public class Consultants
     {
          enum Columns{
-                nombre = 0,
+                name = 0,
                 squad = 1,
                 project = 2,
                 rol = 3
@@ -34,8 +34,9 @@ namespace Collections
         public int GetNumberConsultantsBySquad(int squad){
             
             var consultantCont = 0;
+            int dimension = 0;
 
-            for (int i = 0; i < People.GetLength(0); i++){
+            for (int i = 0; i < People.GetLength(dimension); i++){
                 if(squad == Convert.ToInt32(People[i,(int)Columns.squad]))
                     consultantCont++;    
             }
@@ -52,15 +53,17 @@ namespace Collections
         {
             var consultantCont = 0;
             var consultants = new string[10];
-
-            for (int i = 0; i < People.GetLength(0); i++){
-                if(project == People[i,2])
+            const int dimension = 0;
+            
+            for (int i = 0; i < People.GetLength(dimension); i++){
+                if(project == People[i,(int)Columns.project])
                 {
-                    consultants[consultantCont]=People[i,(int)Columns.nombre];
+                    consultants[consultantCont]=People[i,(int)Columns.name];
                     consultantCont++;
                 }
             }
 
+            Array.Resize(ref consultants,consultantCont);
             return consultants; 
         }
 
@@ -68,7 +71,8 @@ namespace Collections
         {
             var consultantCont = 0;
 
-            for (int i = 0; i < People.GetLength(0); i++){
+            const int dimension = 0;
+            for (int i = 0; i < People.GetLength(dimension); i++){
                 if(rol == People[i,(int)Columns.rol])
                     consultantCont++;    
             }
