@@ -8,7 +8,8 @@ namespace Collections
                 name = 0,
                 squad = 1,
                 project = 2,
-                rol = 3
+                rol = 3,
+                id = 4
             }
 
         public Consultants()
