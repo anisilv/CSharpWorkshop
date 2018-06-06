@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CollectionsWorkshop", "CollectionsWorkshop", "{EA04339E-7E7E-4D7D-8DF0-496751EAFC9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "CollectionsWorkshop\Collections\Collections.csproj", "{DFAA7CBC-40A6-4E34-A67B-5717040969D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "CollectionsWorkshopRefactoring\Collections\Collections.csproj", "{DFAA7CBC-40A6-4E34-A67B-5717040969D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.Test", "CollectionsWorkshop\Collections.Test\Collections.Test.csproj", "{618E8D72-EAA4-4607-9229-90B421FDAC8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.Test", "CollectionsWorkshopRefactoring\Collections.Test\Collections.Test.csproj", "{618E8D72-EAA4-4607-9229-90B421FDAC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "CollectionsWorkshop\Domain\Domain.csproj", "{3D2922E2-E951-4738-A33E-2B80F3D5A42B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "CollectionsWorkshopRefactoring\Domain\Domain.csproj", "{3D2922E2-E951-4738-A33E-2B80F3D5A42B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "CollectionsWorkshop\Repository\Repository.csproj", "{5DA6831F-8E75-41F4-B224-7ED562FAC7CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "CollectionsWorkshopRefactoring\Repository\Repository.csproj", "{5DA6831F-8E75-41F4-B224-7ED562FAC7CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
