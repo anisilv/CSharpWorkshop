@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Xunit;
 namespace Collections.Test
 {
@@ -13,26 +14,30 @@ namespace Collections.Test
 
         [Fact]
         public void SouldBeLength11()
-        {         
-            Assert.Equal(11,_consultants.People.GetLength(0));
+        {
+            var expectedNumberConsultants = 11;         
+            Assert.Equal(expectedNumberConsultants, _consultants.People.Count);
         }
 
         [Fact]
         public void SouldBe5ConsultantsWhenIRequestSquad1()
         {
-            Assert.Equal(5,_consultants.GetNumberConsultantsBySquad(1));
+            var expectedNumberConsultants = 5;
+            Assert.Equal(expectedNumberConsultants, _consultants.GetNumberConsultantsBySquad(1));
         }
 
         [Fact]
         public void SouldBe6ConsultantsWhenIRequestSquad2()
         {
-            Assert.Equal(5,_consultants.GetNumberConsultantsBySquad(2));
+            var expectedNumberConsultants = 5;
+            Assert.Equal(expectedNumberConsultants,_consultants.GetNumberConsultantsBySquad(2));
         }
 
         [Fact]
         public void SouldBe2ConsultantsWhenIRequestForTradeMaster()
         {
-            Assert.Equal(2,_consultants.GetNumberConsultantsByProject("TradeMaster"));
+            var expectedNumberConsultants = 2;
+            Assert.Equal(expectedNumberConsultants,_consultants.GetNumberConsultantsByProject("TradeMaster"));
         }
 
         [Fact]
@@ -48,9 +53,52 @@ namespace Collections.Test
         public void SouldReturn_Or_lan_di_to_WhenIRequestForBA()
         {
             var numberOfBa = _consultants.GetNumberConsultantsByRol("BA");
-            
-            Assert.Equal(1,numberOfBa);
+            const int expectedNumberOfConsultants = 1;
+
+            Assert.Equal(expectedNumberOfConsultants, numberOfBa);
            
+        }
+
+        [Fact]
+        public void ShouldReturn2DevswhenIRequestForIBUI(){
+            var expectedNumberConsultants = 2;
+            const string project = "IB.Project.UI";
+
+            var currentConsultants = _consultants.filter
+                                                .ByProject(project)
+                                                .Get();
+            
+            Assert.Equal(expectedNumberConsultants,currentConsultants.ToList().Count);
+
+        }
+
+        [Fact]
+        public void ShouldReturn1DevswhenIRequestForSentryAndDevRol(){
+            var expectedNumberConsultants = 1;
+            const string project = "Sentry";
+            const string rol = "DEV";
+
+            var currentConsultants = _consultants.filter
+                                                .ByProject(project)
+                                                .ByRol(rol)
+                                                .Get();
+            
+            Assert.Equal(expectedNumberConsultants,currentConsultants.ToList().Count);
+
+        }
+
+        [Fact]
+        public void ShouldReturn1DevswhenIRequestForSentryAndSquad1(){
+            var expectedNumberConsultants = 1;
+            const string project = "Sentry";
+            
+            var currentConsultants = _consultants.filter
+                                                .ByProject(project)
+                                                .BySquad(1)
+                                                .Get();
+            
+            Assert.Equal(expectedNumberConsultants,currentConsultants.ToList().Count);
+
         }
         
     }
