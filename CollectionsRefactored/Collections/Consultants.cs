@@ -53,41 +53,7 @@ namespace Collections
             return People.Count(c => c.Rol.Equals(rol));
         }
 
-        public Filter filter => new Filter();
-        public class Filter
-        {
-            private IEnumerable<Consultant> enumerator;
-
-            public Filter()
-            {
-                enumerator = new Consultants().People;
-            }
-
-            public Filter ByProject(string project)
-            {
-                enumerator = enumerator.Where(c => c.Project.Equals(project));
-                return this;
-            }
-
-            public Filter ByRol(string rol)
-            {
-                enumerator = enumerator.Where(c => c.Rol.Equals(rol));
-                return this;
-            }
-
-            public Filter BySquad(int squad)
-            {
-                enumerator = enumerator.Where(c => c.Squad.Equals(squad));
-                return this;
-            }
-
-            public IEnumerable<Consultant> Get()
-            {
-                return enumerator;
-            }
-
-
-          
-        }
+        public ConsultantsFilter filter => new ConsultantsFilter();
+        
     }
 }
