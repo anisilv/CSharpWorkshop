@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Repository;
 
 namespace CollectionsKeyValue
 {
@@ -7,17 +8,9 @@ namespace CollectionsKeyValue
     {
         public Dictionary<string,string> Offices {get; set;}
 
-        public TWOffices()
+        public TWOffices(IOfficeRepository repository)
         {
-            Offices = new Dictionary<string, string>
-            {
-                {"UIO","Quito"},
-                {"Stgo","Santiago"},
-                {"Rcf","Recife"},
-                {"POA","Porto Alegre"},
-                {"BH","Belo Horizonte"},
-                {"SP","Sao Paulo"}
-            };
+            Offices = repository.GetOffices(); 
         }
 
         public string GetOffice(string key)

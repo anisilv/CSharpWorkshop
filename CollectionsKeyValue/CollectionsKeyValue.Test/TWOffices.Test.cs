@@ -1,19 +1,24 @@
 using System;
 using CollectionsKeyValue;
+using CollectionsKeyValue.Test;
 using Xunit;
 
 namespace CollectionKeyValue.Test
 {
     public class TWOfficesTest
     {
+        TWOffices _offices;
+
+        public TWOfficesTest()
+        {
+            _offices = new TWOffices(new OfficeRepositoryTest());
+        }
+
         [Fact]
         public void ShouldGetQuitoOfficeWhenISendUIO()
         {
-            var offices = new TWOffices();
-
             var expectedOffice = "Quito";
-
-            var currentOffice = offices.GetOffice("UIO");
+            var currentOffice = _offices.GetOffice("UIO");
 
             Assert.Equal(expectedOffice,currentOffice);
         }
@@ -21,9 +26,9 @@ namespace CollectionKeyValue.Test
         [Fact]
         public void ShouldThrowExceptionWhenISendFoo()
         {
-            var offices = new TWOffices();
-
-            Assert.Throws<ArgumentException>(()=> offices.GetOffice("foo"));
+            Assert.Throws<ArgumentException>(()=> _offices.GetOffice("foo"));
         }
+
+        
     }
 }

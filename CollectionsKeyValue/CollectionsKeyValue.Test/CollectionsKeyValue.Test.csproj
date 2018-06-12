@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CollectionsKeyValue\CollectionsKeyValue.csproj" />
+    <ProjectReference Include="..\..\Repository\Repository.csproj" />
   </ItemGroup>
 
 </Project>
