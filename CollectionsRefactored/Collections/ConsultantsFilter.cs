@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using Domain;
+using Repository;
 
 namespace Collections
 {
-    public class ConsultantsFilter
+    public class ConsultantsFilter : Consultants
         {
             private IEnumerable<Consultant> _consultantsFilter;
 
-            public ConsultantsFilter()
+            public ConsultantsFilter(IConsultantsRepositoryRefactored repository) : base(repository)
             {
-                _consultantsFilter = new Consultants().People;
+                _consultantsFilter = new Consultants(repository).People;
             }
 
             public ConsultantsFilter ByProject(string project)
