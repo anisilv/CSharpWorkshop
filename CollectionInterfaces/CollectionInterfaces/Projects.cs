@@ -31,7 +31,7 @@ namespace CollectionInterfaces
 
             using(var e  = GetEnumerator())
             {
-                while (GetEnumerator().MoveNext())
+                while (e.MoveNext())
                 result++;
             }
             return result;
