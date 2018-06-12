@@ -4,25 +4,24 @@ using Domain;
 
 namespace CollectionInterfaces
 {
-    public class GugguenProjects : ICollection<Project>
+    public class SquadProjects : IList<Project>
     {
-        private const string projectAppend = "-Securities";
-        ICollection<Project> _items;
+        private IList<Project> _items;
 
-        public GugguenProjects()
+        public SquadProjects()
         {
             _items = new List<Project>();
         }
 
-        public int Count => _items.Count;
+        public Project this[int index] { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public int Count => _items.Count; 
 
         public bool IsReadOnly => throw new System.NotImplementedException();
 
         public void Add(Project item)
         {
-            var newItem = item;
-            item.Name = item.Name + projectAppend;
-            _items.Add(item); 
+            _items.Add(item);
         }
 
         public void Clear()
@@ -37,7 +36,7 @@ namespace CollectionInterfaces
 
         public void CopyTo(Project[] array, int arrayIndex)
         {
-            throw new System.NotImplementedException(); 
+            throw new System.NotImplementedException();
         }
 
         public IEnumerator<Project> GetEnumerator()
@@ -45,14 +44,29 @@ namespace CollectionInterfaces
             return _items.GetEnumerator();
         }
 
+        public int IndexOf(Project item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert(int index, Project item)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool Remove(Project item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveAt(int index)
         {
             throw new System.NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.GetEnumerator();
+            return _items.GetEnumerator();
         }
     }
 }
