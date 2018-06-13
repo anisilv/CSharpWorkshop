@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsKeyValue.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{02BA5953-2525-4F49-83A1-1059883475C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "domain\domain.csproj", "{2E25A923-A465-4731-A0B6-0307BB774913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2E25A923-A465-4731-A0B6-0307BB774913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
