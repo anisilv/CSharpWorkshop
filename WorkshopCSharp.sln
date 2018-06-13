@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsKeyValue.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{02BA5953-2525-4F49-83A1-1059883475C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "domain\domain.csproj", "{2E25A923-A465-4731-A0B6-0307BB774913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,6 +150,18 @@ Global
 		{02BA5953-2525-4F49-83A1-1059883475C0}.Release|x64.Build.0 = Release|x64
 		{02BA5953-2525-4F49-83A1-1059883475C0}.Release|x86.ActiveCfg = Release|x86
 		{02BA5953-2525-4F49-83A1-1059883475C0}.Release|x86.Build.0 = Release|x86
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|x64.ActiveCfg = Debug|x64
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|x64.Build.0 = Debug|x64
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|x86.ActiveCfg = Debug|x86
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Debug|x86.Build.0 = Debug|x86
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|x64.ActiveCfg = Release|x64
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|x64.Build.0 = Release|x64
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|x86.ActiveCfg = Release|x86
+		{2E25A923-A465-4731-A0B6-0307BB774913}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DFAA7CBC-40A6-4E34-A67B-5717040969D7} = {EA04339E-7E7E-4D7D-8DF0-496751EAFC9A}
