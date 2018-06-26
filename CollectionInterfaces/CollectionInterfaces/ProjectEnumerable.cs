@@ -4,21 +4,24 @@ using Domain;
 
 namespace CollectionInterfaces
 {
-    public class Projects : IEnumerable<Project>
+    public class ProjectEnumerable : IEnumerable<Project>
     {
-        private Project _projectA,_projectB,_projectC;
+         private readonly IEnumerable<Project> _projects;
 
-        public Projects(Project projectA,Project projectB,Project projectC){
-
-            this._projectA = projectA;
-            this._projectB = projectB;
-            this._projectC = projectC;
+        public ProjectEnumerable(params Project[] projects)
+        {
+            _projects = projects;
         }
+
         public IEnumerator<Project> GetEnumerator()
         {
-            yield return _projectA;
-            yield return _projectB;
-            yield return _projectC;
+            foreach (var prj in _projects)
+            {
+                if (prj != null)
+                {
+                    yield return prj;
+                }
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -26,16 +29,15 @@ namespace CollectionInterfaces
             return GetEnumerator();
         }
 
-        public int Count(){
-            int result = 0;
-
-            using(var e  = GetEnumerator())
+        public int GetTotalOfProjects()
+        {
+            var result = 0;
+            using (var e = GetEnumerator())
             {
                 while (e.MoveNext())
-                result++;
+                    result++;
             }
             return result;
         }
-
     }
 }

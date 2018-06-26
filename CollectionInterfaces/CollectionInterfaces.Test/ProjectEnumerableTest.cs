@@ -3,27 +3,16 @@ using Xunit;
 
 namespace CollectionInterfaces.Test
 {
-    public class ProjectsTest
+    public class ProjectEnumerableTest
     {
-        Projects _projects;
-
-        public ProjectsTest()
-        {
-            var sentry = new Project{Name = "Sentry", Code = "prj-001"};
-            var tradeMaster = new Project{Name = "tradeMaster", Code = "prj-002"};
-            var elm = new Project{Name = "ELM", Code = "prj-003"};
-
-             _projects= new Projects(sentry,tradeMaster,elm);
-        }
-
         [Fact]
-        public void SouldReturn3Projects()
+        public void SouldReturn2ProjectsNotNulls()
         {
-                       
-            var expectedNumberProjects = 3;
+            var projectEnumerable = new ProjectEnumerable(new Project(), null, new Project());
 
-            var currentNumberProjects = _projects.Count();
-            
+            var currentNumberProjects = projectEnumerable.GetTotalOfProjects();
+
+            var expectedNumberProjects = 2;
             Assert.Equal(expectedNumberProjects, currentNumberProjects);
         }
     }
