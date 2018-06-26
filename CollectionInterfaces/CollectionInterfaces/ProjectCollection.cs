@@ -4,12 +4,12 @@ using Domain;
 
 namespace CollectionInterfaces
 {
-    public class GugguenProjects : ICollection<Project>
+    public class ProjectCollection : ICollection<Project>
     {
         private const string projectAppend = "-Securities";
         ICollection<Project> _items;
 
-        public GugguenProjects()
+        public ProjectCollection()
         {
             _items = new List<Project>();
         }
