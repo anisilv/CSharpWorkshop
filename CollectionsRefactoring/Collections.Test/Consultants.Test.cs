@@ -8,7 +8,7 @@ namespace Collections.Test
 
         public ConsultantsTest()
         {
-            _consultants = new Consultants(new ConsultantsRepositoryTest());
+            _consultants = new Consultants(new ConsultantsRepositoryDouble());
         }
 
         [Fact]

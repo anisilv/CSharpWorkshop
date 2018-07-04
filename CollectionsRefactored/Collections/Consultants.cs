@@ -36,7 +36,7 @@ namespace Collections
 
         public int GetNumberConsultantsByRol(string rol)
         {
-            return People.Count(c => c.Rol.Equals(rol));
+            return People.Count(c => c.Role.Equals(rol));
         }
 
         public ConsultantsFilter filter => new ConsultantsFilter(_repository);

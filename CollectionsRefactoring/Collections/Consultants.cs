@@ -1,35 +1,28 @@
 using System;
+using System.Collections.Generic;
+using Domain;
 using Repository;
 
 namespace Collections
 {
     public class Consultants
     {
-         enum Columns{
-                name = 0,
-                squad = 1,
-                project = 2,
-                rol = 3,
-                id = 4
-            }
-
         public Consultants(IConsultantsRepository repository)
         {
             People = repository.GetConsultants(); 
         }
 
-        public string[,] People{get; set;}
+        public IEnumerable<Consultant> People{get; set;}
 
         public int GetNumberConsultantsBySquad(int squad){
             
             var consultantCont = 0;
-            int dimension = 0;
 
-            for (int i = 0; i < People.GetLength(dimension); i++){
-                if(squad == Convert.ToInt32(People[i,(int)Columns.squad]))
-                    consultantCont++;    
+            foreach(var item in People)
+            {
+                if(squad == item.Squad)
+                    consultantCont++;                    
             }
-
             return consultantCont;
         }
 
@@ -44,10 +37,18 @@ namespace Collections
             var consultants = new string[10];
             const int dimension = 0;
             
+            var consultants = new List<>
+            foreach(var item in People)
+            {
+                if(project == item.Project)
+                    consultantCont++;                    
+            }
+            return consultantCont;
+
             for (int i = 0; i < People.GetLength(dimension); i++){
-                if(project == People[i,(int)Columns.project])
+                if(project == People[i].Project)
                 {
-                    consultants[consultantCont]=People[i,(int)Columns.name];
+                    consultants[consultantCont]=People[i].Name;
                     consultantCont++;
                 }
             }
@@ -56,13 +57,13 @@ namespace Collections
             return consultants; 
         }
 
-        public int GetNumberConsultantsByRol(string rol)
+        public int GetNumberConsultantsByRol(string role)
         {
             var consultantCont = 0;
 
             const int dimension = 0;
             for (int i = 0; i < People.GetLength(dimension); i++){
-                if(rol == People[i,(int)Columns.rol])
+                if(role == People[i].Role)
                     consultantCont++;    
             }
 

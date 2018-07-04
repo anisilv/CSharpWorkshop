@@ -22,7 +22,7 @@ namespace Collections
 
             public ConsultantsFilter ByRol(string rol)
             {
-                _consultantsFilter = _consultantsFilter.Where(c => c.Rol.Equals(rol));
+                _consultantsFilter = _consultantsFilter.Where(c => c.Role.Equals(rol));
                 return this;
             }
 

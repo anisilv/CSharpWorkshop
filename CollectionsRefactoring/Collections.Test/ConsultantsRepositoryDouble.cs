@@ -4,18 +4,25 @@ using Repository;
 
 namespace Collections.Test
 {
-    public class ConsultantsRepositoryTest : IConsultantsRepositoryRefactored
+    public class ConsultantsRepositoryDouble : IConsultantsRepository
     {
-        public List<Consultant> GetConsultants()
+        public IEnumerable<Consultant> GetConsultants()
         {
-            return new List<Consultant>
-            {
-                new Consultant.Builder().WithName("Albero")
-                                    .WithProject("TradeMaster")
-                                    .WithSquad1AndRolDev()
-                                    .WithId("GG-01")
-                                    .Build(),
-                new Consultant{Name = "Robero A.", Squad = 2, Project ="Octopus",Role = "DEV",Id = "GG-02"},
+            var consultants = new List<Consultant> {
+                new Consultant() {
+                    Name = "Albero",
+                    Squad = 1,
+                    Project = "TradeMaster",
+                    Role = "DEV",
+                    Id = "GG-01"
+                },
+                new Consultant() {
+                    Name = "Robero A.", 
+                    Squad = 2,
+                    Project = "Octopus",
+                    Role = "DEV",
+                    Id = "GG-02"
+                },
                 new Consultant{Name = "Tex", Squad = 2, Project ="IB.Project.UI",Role = "DEV",Id = "GG-03"},
                 new Consultant{Name = "Mauri",Squad = 2, Project ="Deployment Advocate",Role = "DEV",Id = "GG-04"},
                 new Consultant{Name = "Anita",Squad = 2, Project ="IBMS",Role = "DEV",Id = "GG-05"},
@@ -26,6 +33,8 @@ namespace Collections.Test
                 new Consultant{Name = "Orlan-di-to",Squad = 3,Project ="Sentry", Role = "BA",Id = "GG-10"},
                 new Consultant{Name = "Slin",Squad = 1,Project ="Sentry",Role = "DEV", Id = "GG-11"}
             };
+            
+            return consultants;
         }
-    }  
+    }
 }

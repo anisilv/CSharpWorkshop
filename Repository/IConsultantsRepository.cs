@@ -5,7 +5,7 @@ namespace Repository
 {
     public interface IConsultantsRepository
     {
-         string[,] GetConsultants();
+         IEnumerable<Consultant> GetConsultants();
     }
 
     public interface IConsultantsRepositoryRefactored

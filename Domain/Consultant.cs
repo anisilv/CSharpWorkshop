@@ -5,7 +5,7 @@ namespace Domain
         public string Name {get; set;}
         public int Squad {get; set;}
         public string Project {get; set;}
-        public string Rol {get; set;}
+        public string Role {get; set;}
         public string Id {get; set;}
 
         public class Builder
@@ -49,7 +49,7 @@ namespace Domain
             public Builder WithSquad1AndRolDev()
             {
                 _instance.Squad = 1;
-                _instance.Rol = "Dev";
+                _instance.Role = "Dev";
                 
                 return this;
             }
