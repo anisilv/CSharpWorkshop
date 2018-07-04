@@ -4,11 +4,11 @@ using Domain;
 
 namespace CollectionInterfaces
 {
-    public class SquadProjects : IList<Project>
+    public class ProjectList : IList<Project>
     {
         private IList<Project> _items;
 
-        public SquadProjects()
+        public ProjectList()
         {
             _items = new List<Project>();
         }

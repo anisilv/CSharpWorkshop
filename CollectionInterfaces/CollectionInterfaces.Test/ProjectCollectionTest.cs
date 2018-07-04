@@ -3,12 +3,12 @@ using Xunit;
 
 namespace CollectionInterfaces.Test
 {
-    public class GugguenProjectsTest
+    public class ProjectCollectionTest
     {
-        GugguenProjects _projects;
-        public GugguenProjectsTest()
+        ProjectCollection _projects;
+        public ProjectCollectionTest()
         {
-            _projects = new GugguenProjects();
+            _projects = new ProjectCollection();
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace CollectionInterfaces.Test
         [Fact]
         public void souldReturnFacsetSecuritiesWhenAddProject(){
 
-            _projects = new GugguenProjects();
+            _projects = new ProjectCollection();
 
             var newProject = new ProjectTest.Builder()
                                             .WithName("Facset")

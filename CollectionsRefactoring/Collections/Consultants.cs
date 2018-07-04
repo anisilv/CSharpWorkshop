@@ -35,20 +35,11 @@ namespace Collections
         {
             var consultantCont = 0;
             var consultants = new string[10];
-            const int dimension = 0;
-            
-            var consultants = new List<>
             foreach(var item in People)
             {
                 if(project == item.Project)
-                    consultantCont++;                    
-            }
-            return consultantCont;
-
-            for (int i = 0; i < People.GetLength(dimension); i++){
-                if(project == People[i].Project)
                 {
-                    consultants[consultantCont]=People[i].Name;
+                    consultants[consultantCont]=item.Name;
                     consultantCont++;
                 }
             }
@@ -61,13 +52,15 @@ namespace Collections
         {
             var consultantCont = 0;
 
-            const int dimension = 0;
-            for (int i = 0; i < People.GetLength(dimension); i++){
-                if(role == People[i].Role)
+            foreach(var item in People)
+            {
+                if(role == item.Role)
                     consultantCont++;    
+
             }
 
             return consultantCont;
+
         }
     }
 }

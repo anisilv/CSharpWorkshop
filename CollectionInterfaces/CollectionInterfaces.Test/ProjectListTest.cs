@@ -5,12 +5,12 @@ namespace CollectionInterfaces.Test
 {
     public class SquadProjectsTest
     {
-        private SquadProjects _projects;
+        private ProjectList _projects;
 
         [Fact]
         public void souldReturnFacsetSecuritiesWhenAddProject(){
 
-            _projects = new SquadProjects();
+            _projects = new ProjectList();
 
             var newProject = new ProjectTest.Builder()
                                             .WithName("Facset")
@@ -37,7 +37,7 @@ namespace CollectionInterfaces.Test
         [Fact]
         public void ShouldReturn2ElementsInList()
         {
-            _projects = new SquadProjects();
+            _projects = new ProjectList();
 
             var expectedProjectNumber = 2;
 
